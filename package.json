@@ -6,6 +6,7 @@
   "author": "sunqi <sunqi@xiao100.com>",
   "license": "MIT",
   "dependencies": {
+    "express": "^4.17.1",
     "koa": "^2.13.4"
   },
   "devDependencies": {
