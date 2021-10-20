@@ -3,17 +3,21 @@ import koa from 'koa'
 const app = new koa()
 
 app.use(async (ctx, next) => {
-  ctx.body = 'hello'
   await next()
-  ctx.body += ' qdd'
+  const time = ctx.response.get('X-Response-Time') // 读取 response header
+  console.log(`${ctx.url} - ${time}s`)
 })
 app.use(async (ctx, next) => {
-  ctx.body += ' world'
+  const  start = Date.now() // 记录开始时间
   await next()
+  const time = Date.now() - start // 记录结束时间 - start = 总耗时
+  ctx.set('X-Response-Time', `${time}ms`) // 总耗时 写入 response header 中
 })
 app.use(async (ctx, next) => {
-  ctx.set('Content-Type', 'text/html; charset=utf-8')
-  await next()
+  ctx.body = 'hello world'
+  for(let i = 0; i < 10000; i++) {
+    ctx.body += 'hello world'
+  }
 })
 
 app.listen(5000, () => {
