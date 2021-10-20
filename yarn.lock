@@ -228,7 +228,7 @@ depd@^2.0.0, depd@~2.0.0:
   resolved "https://registry.npm.taobao.org/depd/download/depd-2.0.0.tgz#b696163cc757560d09cf22cc8fad1571b79e76df"
   integrity sha1-tpYWPMdXVg0JzyLMj60Vcbeedt8=
 
-depd@~1.1.2:
+depd@~1.1.0, depd@~1.1.2:
   version "1.1.2"
   resolved "https://registry.npm.taobao.org/depd/download/depd-1.1.2.tgz#9bcd52e14c097763e749b274c4346ed2e560b5a9"
   integrity sha1-m81S4UwJd2PnSbJ0xDRu0uVgtak=
@@ -507,6 +507,11 @@ on-finished@^2.3.0, on-finished@~2.3.0:
   dependencies:
     ee-first "1.1.1"
 
+on-headers@~1.0.1:
+  version "1.0.2"
+  resolved "https://registry.nlark.com/on-headers/download/on-headers-1.0.2.tgz#772b0ae6aaa525c399e489adfad90c403eb3c28f"
+  integrity sha1-dysK5qqlJcOZ5Imt+tkMQD6zwo8=
+
 only@~0.0.2:
   version "0.0.2"
   resolved "https://registry.npm.taobao.org/only/download/only-0.0.2.tgz#2afde84d03e50b9a8edc444e30610a70295edfb4"
@@ -549,6 +554,14 @@ raw-body@2.4.0:
     http-errors "1.7.2"
     iconv-lite "0.4.24"
     unpipe "1.0.0"
+
+response-time@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.nlark.com/response-time/download/response-time-2.3.2.tgz#ffa71bab952d62f7c1d49b7434355fbc68dffc5a"
+  integrity sha1-/6cbq5UtYvfB1Jt0NDVfvGjf/Fo=
+  dependencies:
+    depd "~1.1.0"
+    on-headers "~1.0.1"
 
 safe-buffer@5.1.2:
   version "5.1.2"
